@@ -4,7 +4,6 @@ class Login
 
     public static function check_login()
     {
-        echo "in check login";
         if (isset($_SESSION["userid"]) && is_numeric($_SESSION["userid"])) {
             //logged in this visit
             return true;
@@ -19,7 +18,6 @@ class Login
 
     public static function Authenticate($entered_username, $entered_password, $remeber_me = true)
     {
-        echo "in authanticate";
 
         if ($entered_username == correct_username && sha1($entered_password) == correct_password) {
             if ($remeber_me) {
@@ -34,8 +32,7 @@ class Login
     }
 
     public static function Remember()
-    {echo "in remember";
-
+    {
         setcookie("remeber_me", "ndjbdxc9898ccdmcdcdcdc22op2op2nd2099ddd9cdd99d9d9c333cccdccxxscddxxdssndndndnnjnji9i", 0);
         Counter::countVisitors();
     }
