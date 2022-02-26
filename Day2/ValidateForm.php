@@ -40,7 +40,7 @@ if (empty($error)) {
     session_start();
 
    
-    $_counter = isset($_);
+   // $_counter = isset($_);
     if (!isset($_SESSION["is_visited"])) {
         echo "first visit, hello!";
         $_SESSION["is_visited"] = true;
